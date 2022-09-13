@@ -1,0 +1,29 @@
+[
+    {
+        "id": 0,
+        "name": "Home - Level 0",
+        "backgroundSource": "level_0/background.jpg",
+        "items": [
+            {
+                "itemName": "Window",
+                "itemSource": "level_0/window.png",
+                "positionX": "75%",
+                "positionY": "37%",
+                "sizeX": "5%",
+                "sizeY": "10%",
+                "descriptionHeader": "Ikkunan historia",
+                "descriptionText": "Ikkunoita on ollut pitkään. Niiden tarkoitus on päästää päivänvaloa sisään rakennukseen jolloin muuta valaistusta ei tarvita. Nykyään ikkunat ovat yleensä lasia, mutta ennen vanhaan ikkuna saattoi olla vain reikä rakennuksen seinässä jossa oli puinen luukku jolla ikkunan pystyi sulkemaan."
+            },
+            {
+                "itemName": "Door",
+                "itemSource": "",
+                "positionX": "56%",
+                "positionY": "34%",
+                "sizeX": "10%",
+                "sizeY": "20%",
+                "descriptionHeader": "Ovi",
+                "descriptionText": "Ovi on rakennuksen kyljessä oleva luukku, joka mahdollistaa seinän läpi kulkemisen"
+            }
+        ]
+    }
+]
