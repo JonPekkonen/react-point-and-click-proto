@@ -2,20 +2,19 @@ import './LevelItem.css';
 import React, { useState } from 'react';
 
 const LevelItem = (props) => {
-    console.log(props);
-    const { itemData, itemImageSource } = props;
-    console.log(itemData);
+    const { itemData, itemImageSource, setItemInfoData } = props;
 
     const onItemClick = (event) => {
         console.log('Item clicked');
         console.log(event);
+        setItemInfoData({ infoHeader: itemData.infoHeader, infoTexts: itemData.infoTexts })
     }
 
     const mouseOver= (event)=> {
         event.target.style.background = 'rgba(255, 255, 0, 0.5)';
     }
     const mouseOut=(event)=> {
-        event.target.style.background = "rgba(255, 0, 0, 0.5)";
+        event.target.style.background = "";
     }
 
     return (

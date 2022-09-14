@@ -16,3 +16,12 @@
     width: 100%;
     height: 100%;
 }
+
+.itemInfoOverlay {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 60%;
+    height: auto;
+    transform: translate(-50%, -50%);
+}

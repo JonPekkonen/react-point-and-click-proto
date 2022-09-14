@@ -23,7 +23,6 @@ function App() {
         />
       </div>
       <div className='footerContainer'>
-        <button>Button which does nothing</button>
       </div>
     </div>
   );
