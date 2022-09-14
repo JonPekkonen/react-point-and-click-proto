@@ -26,7 +26,20 @@
                 "infoHeader": "Ovi",
                 "infoTexts": [
                     "Ovi on rakennuksen kyljessä oleva luukku, joka mahdollistaa seinän läpi kulkemisen.",
-                    "Toinen kappale ovesta..."
+                    "Toinen kappale ovesta...",
+                    "Tämä ovi ei ole erillinen kuva, se on vain taustakuvasta valittu alue"                    
+                ]
+            },
+            {
+                "name": "SingingCat",
+                "assetSource": "level_0/singing_cat.gif",
+                "positionX": "20%",
+                "positionY": "70%",
+                "sizeX": "12%",
+                "sizeY": "18%",
+                "infoHeader": "Gif kissa",
+                "infoTexts": [
+                    "Etsittävät elementit voivat olla myös animoituja. Esimerkkinä laulava kissa gif animaatio"
                 ]
             }
         ],
