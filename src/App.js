@@ -6,24 +6,29 @@ import './App.css';
 import levels from './levelData.json'
 
 function App() {
+  const [startMenuOpen, setStartMenuOpen] = useState(true)
   const [levelData, setLevelData] = useState(levels[0])
 
-  const nextRoom = () => {
-    console.log('TODO: Render next room');
+  const travelToLevel = (id) => {
+    console.log("Traveling to level " + id);
+    setLevelData(levels.find(level => level.id === id));
   }
+
   return (
     <div className="App">
-      <header className="appHeader">
-        <h2>React point & click prototype</h2>
-      </header>
-      <div className='gameWrapper'>
-        <GameLevel
+      {startMenuOpen ?
+        <header className="appHeader">
+          <h2>{'React point & click prototyyppi'}</h2>
+          <button className='menuButton' onClick={()=>setStartMenuOpen(false)}>Aloita peli</button>
+        </header>
+        :  
+        <div className='gameWrapper'>
+          <GameLevel
             levelData={levelData}
-            nextRoom={nextRoom}
-        />
-      </div>
-      <div className='footerContainer'>
-      </div>
+            travelToLevel={travelToLevel}
+          />
+        </div>
+    }
     </div>
   );
 }

@@ -1,0 +1,56 @@
+.container {
+    background-color: black;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 4px;
+    transition: all 1s;
+}
+
+.infoHeader {
+    color: white;
+}
+
+.infoTextBlock {
+    color: white;
+    margin: 10px 20px;
+}
+
+.answerButton {
+    background-color: lightgrey;
+    border: none;
+    color: black;
+    padding: 10px 16px;
+    border-radius: 4px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 1rem;
+}
+
+.answerOptions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.button {
+    background-color: transparent;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    border-radius: 4px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 2rem
+}
+
+h4 {
+    color: white;
+}

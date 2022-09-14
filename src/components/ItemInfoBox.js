@@ -3,14 +3,14 @@ import React, { useEffect, useState } from 'react';
 
 const ItemInfoBox = (props) => {
     console.log(props);
-    const { data, closeInfoBox } = props;
+    const { data, closeOverlay } = props;
 
     const [isOpen, setIsOpen] = useState(false)
 
     const onCloseButton = () => {
         setIsOpen(false);
         setTimeout(() => {
-            closeInfoBox();
+            closeOverlay();
         }, 800);
     }
 

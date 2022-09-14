@@ -2,15 +2,18 @@ import './GameLevel.css';
 import React, { useState } from 'react';
 import LevelItem from './LevelItem';
 import ItemInfoBox from './ItemInfoBox';
+import TravelTest from './TravelTest';
 const images = require.context('./../assets/', true);
 
 const GameLevel = (props) => {
-    const { levelData, nextRoom } = props;
+    const { levelData, travelToLevel } = props;
     console.log(levelData);
-    const [itemInfoData, setItemInfoData] = useState({})
+    const [itemInfoData, setItemInfoData] = useState(null);
+    const [transitionData, setTransitionData] = useState(null);
 
-    const closeInfoBox = () => {
-        setItemInfoData({});
+    const closeOverlay = () => {
+        setItemInfoData(null);
+        setTransitionData(null);
     }
 
     return (
@@ -18,20 +21,35 @@ const GameLevel = (props) => {
             <img className='backgroundImage' src={images(`./${levelData.backgroundSource}`)} alt='Background' />
             <div className='itemContainer'>
                 {levelData.items.map((item) => <LevelItem
-                    key={item.itemName}
+                    key={item.name}
                     itemData={item}
                     itemImageSource={item.assetSource ? images(`./${item.assetSource}`) : null}
-                    setItemInfoData={setItemInfoData}
+                    setData={setItemInfoData}
+                />)}
+                {levelData.transitions.map((item) => <LevelItem
+                    key={item.name}
+                    itemData={item}
+                    type={'travel'}
+                    itemImageSource={item.assetSource ? images(`./${item.assetSource}`) : null}
+                    setData={setTransitionData}
                 />)}
             </div>
-            {itemInfoData.infoHeader && itemInfoData.infoTexts && 
-                <div className='itemInfoOverlay'>
+            <div className='itemInfoOverlay'>
+                {itemInfoData &&
                     <ItemInfoBox
                         data={itemInfoData}
-                        closeInfoBox={closeInfoBox}
+                        closeOverlay={closeOverlay}
                     />
-                </div>
-            }
+                }
+                {transitionData &&
+                    <TravelTest
+                        data={transitionData}
+                        closeOverlay={closeOverlay}
+                        travelToLevel={travelToLevel}
+                    />
+                }
+
+            </div>
         </div>
     );
 }

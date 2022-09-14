@@ -5,7 +5,7 @@
         "backgroundSource": "level_0/background.jpg",
         "items": [
             {
-                "itemName": "Window",
+                "name": "Window",
                 "assetSource": "level_0/window.png",
                 "positionX": "75%",
                 "positionY": "37%",
@@ -17,7 +17,7 @@
                 ]
             },
             {
-                "itemName": "Door",
+                "name": "Door",
                 "assetSource": "",
                 "positionX": "13%",
                 "positionY": "36%",
@@ -32,17 +32,18 @@
         ],
         "transitions": [
             {
-                "name": "Door",
+                "name": "DoorToBarracks",
                 "assetSource": "",
-                "positionX": "20%",
-                "positionY": "34%",
+                "positionX": "56%",
+                "positionY": "36%",
                 "sizeX": "10%",
                 "sizeY": "20%",
                 "highlighted": false,
                 "targetLevelId": 0,
+                "header": "Ovi testin otsake",
                 "questions": [
                     {
-                        "question": "Haluatko memmä sisään rakennukseen?",
+                        "question": "Haluatko mennä sisään rakennukseen?",
                         "options": [
                             {
                                 "id": 0,
